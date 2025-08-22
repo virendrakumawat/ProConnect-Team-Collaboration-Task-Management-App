@@ -1,1 +1,52 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+:root {
+  --sidebar-bg: #fff; 
+  --sidebar-text: #635f5f;
+  --sidebar-hover-bg: #f4f6f9;
+  --sidebar-hover-text: #4a90e2;
+  --sidebar-active-bg: #4a90e2;
+  --sidebar-active-text: #f4f6f9;
+  --sidebar-active-border: #4a90e2;
+  --sidebar-section-border: #54545445
+}
+body{
+    background-color: #E0E0E0;
+    color:#1C1B1F;
+}
+
+#toast-container > div {
+  background-image: none !important;   /* ← removes the tick/check icon */
+  padding: 8px 36px 8px 12px !important; 
+  width: auto !important;
+  font-family: sans-serif;
+  min-width: 350px !important;
+  max-width: 350px !important;
+  box-shadow: none;
+}
+/* Success */
+.toast-success {
+  background-color: #1cb740ff !important;  /* green */
+}
+
+/* Error */
+.toast-error {
+  background-color: #dc3545 !important;  /* red */
+}
+
+/* Warning */
+.toast-warning {
+  background-color: #ffc107 !important;  /* yellow/orange */
+  color: #212529 !important;             /* dark text for contrast */
+}
+
+.toast-info {
+  background-color: #17a2b8 !important;  /* teal */
+}
+
+#toast-container > div::before { content: none !important; }
+

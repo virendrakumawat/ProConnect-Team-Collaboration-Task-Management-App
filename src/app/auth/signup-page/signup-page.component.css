@@ -1,0 +1,30 @@
+
+.auth-form .row {
+    display: flex;
+    gap: 20px;
+}
+.auth-form .row .form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-logo{
+    justify-content: end;
+}
+.register-auth {
+    width: 50%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-top: 40px;
+}
+.register-auth img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+

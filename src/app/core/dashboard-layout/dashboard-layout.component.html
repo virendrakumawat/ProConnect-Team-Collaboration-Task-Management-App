@@ -1,0 +1,9 @@
+
+<div class="flex">
+      <app-sidebar [collapsed]="isSidebarCollapsed"></app-sidebar>
+    <div class="content flex-1">
+        <app-header (toggleSidebar)="onToggleSidebar()"></app-header>
+        <router-outlet></router-outlet>
+        <app-footer></app-footer>
+    </div>
+</div>

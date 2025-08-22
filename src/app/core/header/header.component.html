@@ -1,0 +1,51 @@
+<header class="header">
+  <!--  toggle start  -->
+  <div class="header-left-side">
+    <button (click)="toggle()" class="togglebutton">
+      <i class="fa fa-bars" aria-hidden="true"></i>
+    </button>
+
+    <div class="toggleInputSearch">
+      <input type="search" placeholder="Search">
+      <i class="fas fa-search search-icon"></i>
+    </div>
+  </div>
+  <!-- toggle end -->
+
+  <div class="header-right-side">
+    <!-- notification icon -->
+    <div class="details-box">
+      <div class="notification-Ball">
+      <i class="fa fa-bell" aria-hidden="true"></i>
+      <span class="notification-badge">5</span>
+    </div>
+    <!-- language selection icon -->
+    <div class="languageSelection" >
+  <div class="selected-language" (click)="toggleDropdown()">
+    <img [src]="selectedLanguage.flag" alt="{{selectedLanguage.name}}">
+    <span>{{ selectedLanguage.name }}</span>
+    <span class="arrow">&#9662;</span>
+  </div>
+
+  <ul class="language-list" *ngIf="isDropdownOpen">
+    <li *ngFor="let item of country" (click)="selectLanguage(item)">
+      <img [src]="item.flag" alt="{{item.name}}">
+      <span>{{ item.name }}</span>
+    </li>
+  </ul>
+    </div>
+    </div>
+
+    <!-- profile  -->
+    <div class="headerProfileSection">
+          <img src="/assest/profile/image.png" alt="profile">
+          <div class="profile-name">
+            <h5>Moni Roy</h5>
+          <p>Admin</p>
+          </div>
+        
+    </div>
+  </div>
+
+
+</header>

@@ -1,0 +1,43 @@
+
+.auth-logo{
+    justify-content: start;
+}
+.forgot-form input{
+    margin:10px 0px 10px 0px;
+}
+.auth-left{
+    gap: 10px  !important;
+    justify-content: left !important
+}
+
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  color: #374151;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-bottom: 25px;
+}
+
+.back-btn .arrow {
+  transition: transform 0.3s ease;
+}
+
+.back-btn:hover {
+  background: #3b82f6;
+  border-color: #3b82f6;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+}
+
+.back-btn:hover .arrow {
+  transform: translateX(-4px);
+}

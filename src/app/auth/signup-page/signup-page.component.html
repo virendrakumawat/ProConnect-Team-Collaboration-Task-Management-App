@@ -1,0 +1,94 @@
+<div class="auth-container">
+    <div class="auth-box">
+        <div class="auth-box-inner">
+            <div class=" register-auth">
+                <img src="/assest/sing-up.png" alt="Signup Image" class="signup-image">
+            </div>
+            <div class="auth-right">
+                <div class="auth-logo">
+                    <img src="/assest/logo/logo.png" alt="Logo">
+                    <h5>ProConn</h5>
+                </div>
+                <div class="auth-form">
+                    <h2>Sign Up</h2>
+                    <p>Let’s get you all set up so you can access your personal account.</p>
+                    <form [formGroup]="SignUpForm" (ngSubmit)="SignUpFormData()">
+                        <div class="row">
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" placeholder="John" formControlName="firstName">
+                                <small class="requiredTag" *ngFor="let msg of getformError('firstName')">
+                                    {{msg}}</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" id="lastName" placeholder="Doe" formControlName="lastName">
+                                <small class="requiredTag" *ngFor="let msg of getformError('lastName')"> {{msg}}</small>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" placeholder="john.doe@gmail.com" formControlName="email">
+                                <small class="requiredTag" *ngFor="let msg of getformError('email')"> {{msg}}</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" placeholder="+91 9876543210" formControlName="phoneNumber">
+                                <small class="requiredTag" *ngFor="let msg of getformError('phoneNumber')">
+                                    {{msg}}</small>
+                            </div>
+                        </div>
+
+                        <div class="form-group password-group">
+                            <label for="password">Password</label>
+                            <input [type]="showPasswordtoggle? 'text':'password'" id="password" placeholder="••••••••" formControlName="password">
+                            <small class="requiredTag" *ngFor="let msg of getformError('password')"> {{msg}}</small>
+                            <i class="fa"[ngClass]="showPasswordtoggle ? 'fa-eye-slash' : 'fa-eye'"(click)="showPassword()"></i>
+                        </div>
+
+                        <div class="form-group password-group">
+                            <label for="confirmPassword">Confirm Password</label>
+                            <input [type]="confirmPassword? 'text':'password'" id="confirmPassword" placeholder="••••••••"formControlName="confirmPassword">
+                            <small class="requiredTag" *ngFor="let msg of getformError('confirmPassword')">{{msg}}</small>
+                            <i class="fa"[ngClass]="confirmPassword ? 'fa-eye-slash' : 'fa-eye'"(click)="showConfirmPassword()"></i>
+                        </div>
+
+                        <div class="form-check">
+                            <input type="checkbox" id="agree" formControlName="acceptPolicy">
+
+                            <label for="agree">
+                                I agree to all the <a href="#">Terms</a> and <a href="#">Privacy Policies</a>
+                            </label>
+
+                        </div>
+                        <small class="requiredTag" *ngFor="let msg of getformError('acceptPolicy')"> {{msg}}</small>
+                        <button type="submit" class="submit-btn" [disabled]="SignUpForm.invalid">Create account
+
+                            <span class="spinner" *ngIf="spinner"></span>
+                        </button>
+                    </form>
+
+                    <p class="login-text">
+                        Already have an account? <a routerLink="/sign-in">Login</a>
+                    </p>
+
+                    <div class="divider"><span>Or Sign-up with</span></div>
+
+                    <div class="social-login">
+                        <button class="social-btn facebook">
+                            <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+                        </button>
+                        <button class="social-btn google">
+                            <img src="https://cdn-icons-png.flaticon.com/512/300/300221.png" alt="Google">
+                        </button>
+                        <button class="social-btn linkedin">
+                            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

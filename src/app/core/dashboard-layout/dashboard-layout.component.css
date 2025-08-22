@@ -1,0 +1,10 @@
+.flex {
+  display: flex;
+}
+
+.content {
+  flex: 1;
+  transition: 0.9s;
+  /* background-color:red;         👈 This is what flex-1 means */
+  /* padding: 1rem;   optional */
+}

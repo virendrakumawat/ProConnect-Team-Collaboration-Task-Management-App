@@ -1,0 +1,44 @@
+<app-auth-layout rightImage="/assest/sign-in.png" rightImageAlt="Sign In Image" heading="Sign In"
+    subHeading="Login to access your Pro Connect team collaboration and task management account." showBackButton="true">
+
+    <form [formGroup]="SignInForm" class="login-form" (ngSubmit)="SignInFormData()">
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="john.doe@gmail.com" formControlName="email" />
+            <small class="requiredTag" *ngFor="let msg of getformError('email')">{{msg}}</small>
+        </div>
+        <div class="form-group password-group">
+            <label for="password">Password</label>
+            <input  [type]="Password? 'text':'password'" id="password" placeholder="••••••••" formControlName="password" />
+            <small class="requiredTag" *ngFor="let msg of getformError('password')">{{msg}}</small>
+            <i class="fa"[ngClass]="Password ? 'fa-eye-slash' : 'fa-eye'"(click)="showConfirmPassword()"></i>
+        </div>
+        <div class="form-check" style="justify-content: space-between;">
+            <div style="display: flex;align-items: center;gap: 5px;">
+                <input type="checkbox" id="remember" formControlName="rememberMe" />
+                <label for="remember">Remember me</label>
+                <small class="requiredTag" *ngFor="let msg of getformError('rememberMe')"> {{msg}}</small>
+            </div>
+            <a routerLink="/forgot-password">Forgot password?</a>
+        </div>
+        <button type="submit" class="submit-btn" [disabled]="SignInForm.invalid">
+            Login
+        <span class="spinner" *ngIf="spinner"></span>
+        </button>
+
+        <p class="register-link">Don't have an account? <a routerLink="/sign-up">Sign up</a></p>
+    </form>
+    <div class="divider"><span>Or login with</span></div>
+    <div class="social-login">
+        <button class="social-btn facebook">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+        </button>
+        <button class="social-btn google">
+            <img src="https://cdn-icons-png.flaticon.com/512/300/300221.png" alt="Google">
+        </button>
+        <button class="social-btn linkedin">
+            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+        </button>
+    </div>
+
+</app-auth-layout>

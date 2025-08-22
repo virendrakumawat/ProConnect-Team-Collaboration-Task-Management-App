@@ -1,0 +1,62 @@
+<div [class.collapsed]="collapsed" class="sidebar">
+
+
+  <ng-container *ngIf="!collapsed">
+    <!-- Full Sidebar -->
+
+    <div class="sidebar-header">
+        <h1><img src="/assest/logo/logo.png" alt="logo"/><span class="sidebar-text">Pro</span>Conn</h1>
+    </div>
+    <ul class="sidebar-without-collapsed">
+     <li><a href="#" class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+     <li><a href="#"><i class="fas fa-box"></i> Products</a></li>
+     <li><a href="#"><i class="fas fa-heart"></i> Favorites</a></li>
+     <li><a href="#"><i class="fas fa-envelope"></i> Inbox</a></li>
+     <li><a href="#"><i class="fas fa-list"></i> Order Lists</a></li>
+     <li><a href="#"><i class="fas fa-cubes"></i> Product Stock</a></li>
+  
+  <p class="sidebar-section">Pages</p>
+  <li><a href="#"><i class="fas fa-gift"></i> Pricing</a></li>
+  <li><a href="#"><i class="fas fa-calendar"></i> Calendar</a></li>
+  <li><a href="#"><i class="fas fa-check-square"></i> To-Do</a></li>
+  <li><a href="#"><i class="fas fa-id-card"></i> Contact</a></li>
+  <li><a href="#"><i class="fas fa-file-invoice"></i> Invoice</a></li>
+  <li><a href="#"><i class="fas fa-layer-group"></i> UI Elements</a></li>
+  <li><a href="#"><i class="fas fa-users"></i> Team</a></li>
+  <li><a href="#"><i class="fas fa-th"></i> Table</a></li>
+
+  <p class="sidebar-section"></p>
+  <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+  <li><a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+    </ul>
+  </ng-container>
+
+  <ng-container *ngIf="collapsed">
+    <!-- Only icons -->
+     <div class="collapsed-sidebar-header">
+        <img src="/assest/logo/logo.png" alt="logo"/>
+     </div>
+        <ul class="sidebar-with-collapsed">
+     <li><a href="#" class="active"><i class="fas fa-tachometer-alt"></i> </a></li>
+     <li><a href="#"><i class="fas fa-box"></i> </a></li>
+     <li><a href="#"><i class="fas fa-heart"></i> </a></li>
+     <li><a href="#"><i class="fas fa-envelope"></i> </a></li>
+     <li><a href="#"><i class="fas fa-list"></i> </a></li>
+     <li><a href="#"><i class="fas fa-cubes"></i> </a></li>
+  
+  <p class="sidebar-section"></p>
+  <li><a href="#"><i class="fas fa-gift"></i></a></li>
+  <li><a href="#"><i class="fas fa-calendar"></i> </a></li>
+  <li><a href="#"><i class="fas fa-check-square"></i> </a></li>
+  <li><a href="#"><i class="fas fa-id-card"></i></a></li>
+  <li><a href="#"><i class="fas fa-file-invoice"></i></a></li>
+  <li><a href="#"><i class="fas fa-layer-group"></i></a></li>
+  <li><a href="#"><i class="fas fa-users"></i></a></li>
+  <li><a href="#"><i class="fas fa-th"></i></a></li>
+
+  <p class="sidebar-section"></p>
+  <li><a href="#"><i class="fas fa-cog"></i></a></li>
+  <li><a href="#"><i class="fas fa-sign-out-alt"></i> </a></li>
+    </ul>
+  </ng-container>
+</div>

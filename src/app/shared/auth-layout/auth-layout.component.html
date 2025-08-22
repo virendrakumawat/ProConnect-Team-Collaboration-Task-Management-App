@@ -1,0 +1,32 @@
+<div class="auth-container">
+  <div class="auth-box">
+    <div class="auth-box-inner">
+
+      <!-- Left section -->
+      <div class="auth-left">
+        <div class="auth-logo">
+          <img src="/assest/logo/logo.png" alt="Logo">
+          <h5>ProConn</h5>
+        </div>
+
+        <!-- Dynamic Form Content -->
+        <div class="auth-form">
+          <a routerLink="/sign-in" class="back-btn" *ngIf="showBackButton === 'false'">← Back to login</a>
+          
+            
+
+          <h2>{{heading}}</h2>
+          <p>{{subHeading}}</p>
+
+          <ng-content></ng-content>
+        </div>
+      </div>
+
+      <!-- Right section -->
+      <div class="auth-right login-auth-right">
+        <img [src]="rightImage" [alt]="rightImageAlt">
+      </div>
+
+    </div>
+  </div>
+</div>
