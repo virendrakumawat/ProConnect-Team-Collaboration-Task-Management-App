@@ -5,19 +5,28 @@
     font-family: sans-serif;
 }
 :root {
-  --sidebar-bg: #fff; 
-  --sidebar-text: #635f5f;
-  --sidebar-hover-bg: #f4f6f9;
-  --sidebar-hover-text: #4a90e2;
-  --sidebar-active-bg: #4a90e2;
-  --sidebar-active-text: #f4f6f9;
-  --sidebar-active-border: #4a90e2;
-  --sidebar-section-border: #54545445
+   --sidebar-bg: linear-gradient(135deg, #ffffff 0%, #4a90e2 100%);  /* Sidebar background */
+  --sidebar-active-bg: linear-gradient(135deg, #0f172a 0%, #312e81 100%);     /* Active item background */
+  --sidebar-active-text: #f4f6f9;    /* Active item text color */
+  --sidebar-active-border: linear-gradient(135deg, #0f172a 0%, #312e81 100%); /* Left active border */
+  --sidebar-section-border: #54545445;  /* Section border */
+  --sidebar-text: #635f5f;             /* Normal text color */
+  --sidebar-hover-bg: #f4f6f9;         /* Hover background */
+  --sidebar-hover-text: #6a8bb9;      /* Hover text color */
+
+  /* dark mode css */
+
+  --sidebar-dark-bg: linear-gradient(135deg, #0f172a 0%, #312e81 100%);
+  --sidebar-dark-active-bg: linear-gradient(135deg, #ffffff 0%, #4a90e2 100%);
+  --sidebar-dark-hover-text: #0f172a;      
+
+  /* Main darkmode */
+  --darkMode-bg:linear-gradient(135deg, #0f172a 0%, #312e81 100%);
+  --darkMode-textColor:#f4f6f9;
+  --darkMode-btnColor: linear-gradient(135deg, #ffffff 0%, #4a90e2 100%);
+  --darkMode-btntextColor:#0f172a;
 }
-body{
-    background-color: #E0E0E0;
-    color:#1C1B1F;
-}
+
 
 #toast-container > div {
   background-image: none !important;   /* ← removes the tick/check icon */
@@ -50,3 +59,120 @@ body{
 
 #toast-container > div::before { content: none !important; }
 
+
+
+/* dashboard main section ---------------------------------------------- */
+.projects-container {
+    max-width: 1400px;
+    /* background:  linear-gradient(135deg, #ffffff 0%, #4a90e2 100%); */
+    background: linear-gradient(135deg, #dbd4d4 0%, #4a90e296 100%);
+    margin: 0 auto;
+    color: #333;
+    padding: 2rem;
+    min-height: 100vh;
+}
+
+/* dark Mode css */
+.projects-container .darkMode{
+    background:linear-gradient(135deg, #0f172a 0%, #312e81 100%) ;
+  
+}
+
+
+
+
+
+
+/* animation  */
+
+
+/* Animations */
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes folderBounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}

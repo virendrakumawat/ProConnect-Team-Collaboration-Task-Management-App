@@ -1,1 +1,24 @@
-<p>footer works!</p>
+<footer [ngClass]="{ 'darkMode': theme.themeMode() === 'dark', '': theme.themeMode() === 'light' }">
+  <!-- Left Section -->
+  <div class="footer-left" >
+    <div class="footer-logo">
+      <img src="/assest/logo/logo.png" alt="logo"/>
+      <span class="sidebar-text">Pro</span><span class="conn">Conn</span>
+    </div>
+    <div class="footer-text">© 2025 ProConnect: Team Collaboration & Task Management App. All Rights Reserved.</div>
+  </div>
+
+  <!-- Right Section -->
+  <div class="footer-right">
+    <nav class="footer-links">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Contact</a>
+    </nav>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="#"><i class="fab fa-github"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+  </div>
+</footer>

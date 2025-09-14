@@ -1,0 +1,21 @@
+ <div class="languageSelection">
+  <button mat-button [matMenuTriggerFor]="menu" class="language-name">
+    <img [src]="selectedLang.flag" alt="{{selectedLang.name}}">
+    <span>{{selectedLang.name}}</span>
+  </button>
+
+ <mat-menu #menu="matMenu" panelClass="language-menu">
+  <div class="menu-title " style="text-align: center; margin: 4px auto; border-bottom: 1px solid #837e7e4a; padding-bottom: 4px; font-size: .8rem;">Select Language</div>
+
+  <button mat-menu-item 
+          *ngFor="let lang of country" 
+          (click)="setLanguage(lang)" 
+          class="languageSelectionImage"> 
+   <div class="languagecontentdiv"> <img [src]="lang.flag" [alt]="lang.name">
+    <span>{{ lang.name }}</span>
+    <mat-icon *ngIf="selectedLang.code === lang.code" class="check-icon">check</mat-icon>
+</div>
+    
+  </button>
+</mat-menu>
+    </div>

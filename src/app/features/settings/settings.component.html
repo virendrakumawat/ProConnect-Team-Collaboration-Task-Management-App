@@ -1,0 +1,229 @@
+<div class="projects-container" [ngClass]="{ 'darkMode': theme.themeMode() === 'dark', '': theme.themeMode() === 'light' }">
+
+  <app-each-header [Heading]="'Settings'" [subHeading]="'Manage your account and application preferences'" [iconClass]="'fas fa-cog'" [inputboxShow]="false"></app-each-header>
+  
+ <div class="settings-content" >
+    <!-- Profile Settings -->
+    <div class="settings-section">
+      <div class="section-header">
+        <div class="section-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+        </div>
+        <h3 class="section-title">Profile Settings</h3>
+      </div>
+      <div class="settings-grid">
+        <div class="setting-item">
+          <label class="setting-label">Display Name</label>
+          <div class="input-wrapper">
+            <input type="text" class="setting-input" value="John Doe" placeholder="Enter display name">
+            <div class="input-focus"></div>
+          </div>
+        </div>
+        <div class="setting-item">
+          <label class="setting-label">Email</label>
+          <div class="input-wrapper">
+            <input type="email" class="setting-input" value="john.doe@company.com" placeholder="Enter email">
+            <div class="input-focus"></div>
+          </div>
+        </div>
+        <div class="setting-item">
+          <label class="setting-label">Phone</label>
+          <div class="input-wrapper">
+            <input type="tel" class="setting-input" value="+1 (555) 123-4567" placeholder="Enter phone number">
+            <div class="input-focus"></div>
+          </div>
+        </div>
+        <div class="setting-item">
+          <label class="setting-label">Department</label>
+          <div class="select-wrapper">
+            <select class="setting-select">
+              <option value="engineering" selected>Engineering</option>
+              <option value="design">Design</option>
+              <option value="marketing">Marketing</option>
+              <option value="sales">Sales</option>
+              <option value="hr">Human Resources</option>
+            </select>
+            <div class="select-arrow">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6,9 12,15 18,9"></polyline>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Appearance Settings -->
+    <div class="settings-section">
+      <div class="section-header">
+        <div class="section-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </div>
+        <h3 class="section-title">Appearance</h3>
+      </div>
+      <div class="settings-grid">
+        <div class="setting-item">
+          <label class="setting-label">Theme</label>
+          <div class="toggle-group">
+            <button class="toggle-btn active" type="button">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+              </svg>
+              Light
+            </button>
+            <button class="toggle-btn" type="button">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
+              Dark
+            </button>
+          </div>
+        </div>
+        <div class="setting-item">
+          <label class="setting-label">Language</label>
+          <div class="select-wrapper">
+            <select class="setting-select">
+              <option value="en" selected>English</option>
+              <option value="es">Spanish</option>
+              <option value="fr">French</option>
+              <option value="de">German</option>
+              <option value="ja">Japanese</option>
+            </select>
+            <div class="select-arrow">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6,9 12,15 18,9"></polyline>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Notification Settings -->
+    <div class="settings-section">
+      <div class="section-header">
+        <div class="section-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+            <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+          </svg>
+        </div>
+        <h3 class="section-title">Notifications</h3>
+      </div>
+      <div class="settings-list">
+        <div class="setting-toggle">
+          <div class="toggle-info">
+            <span class="toggle-title">Email Notifications</span>
+            <span class="toggle-desc">Receive notifications via email</span>
+          </div>
+          <label class="switch">
+            <input type="checkbox" checked>
+            <span class="slider"></span>
+          </label>
+        </div>
+        <div class="setting-toggle">
+          <div class="toggle-info">
+            <span class="toggle-title">Push Notifications</span>
+            <span class="toggle-desc">Receive push notifications in browser</span>
+          </div>
+          <label class="switch">
+            <input type="checkbox">
+            <span class="slider"></span>
+          </label>
+        </div>
+        <div class="setting-toggle">
+          <div class="toggle-info">
+            <span class="toggle-title">Task Reminders</span>
+            <span class="toggle-desc">Get reminded about upcoming tasks</span>
+          </div>
+          <label class="switch">
+            <input type="checkbox" checked>
+            <span class="slider"></span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Security Settings -->
+    <div class="settings-section">
+      <div class="section-header">
+        <div class="section-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <circle cx="12" cy="16" r="1"></circle>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+        </div>
+        <h3 class="section-title">Security</h3>
+      </div>
+      <div class="settings-list">
+        <div class="setting-action">
+          <div class="action-info">
+            <span class="action-title">Change Password</span>
+            <span class="action-desc">Update your account password</span>
+          </div>
+          <button class="action-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 12l2 2 4-4"></path>
+            </svg>
+            Change
+          </button>
+        </div>
+        <div class="setting-action">
+          <div class="action-info">
+            <span class="action-title">Two-Factor Authentication</span>
+            <span class="action-desc">Add an extra layer of security</span>
+          </div>
+          <button class="action-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+            Setup
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="settings-actions">
+      <button type="button" class="btn btn-secondary">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 6h18l-2 13H5L3 6z"></path>
+          <path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+        </svg>
+        Reset to Default
+      </button>
+      <button type="submit" class="btn btn-primary">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+          <polyline points="17,21 17,13 7,13 7,21"></polyline>
+          <polyline points="7,3 7,8 15,8"></polyline>
+        </svg>
+        Save Changes
+      </button>
+    </div>
+  </div>
+</div>
+
+

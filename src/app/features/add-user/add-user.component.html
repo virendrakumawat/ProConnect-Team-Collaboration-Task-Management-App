@@ -1,0 +1,129 @@
+<div class="projects-container"  [ngClass]="{ 'darkMode': theme.themeMode() === 'dark', '': theme.themeMode() === 'light' }">
+
+  <app-each-header [Heading]="'Add Users'" [subHeading]="'Below you can add more users and inform him for verification'" [iconClass]="'fa-solid fa-user-plus'" [inputboxShow]="false"></app-each-header>
+   <div class="form-container">
+    <div class="form-header">
+    <div class="header-icon">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+        <circle cx="9" cy="7" r="4"></circle>
+        <line x1="19" y1="8" x2="19" y2="14"></line>
+        <line x1="22" y1="11" x2="16" y2="11"></line>
+      </svg>
+    </div>
+    
+  </div>
+    <form class="user-form">
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">First Name</label>
+          <div class="input-wrapper">
+            <input type="text" class="form-input" placeholder="Enter first name" required>
+            <div class="input-focus"></div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Last Name</label>
+          <div class="input-wrapper">
+            <input type="text" class="form-input" placeholder="Enter last name" required>
+            <div class="input-focus"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">Email Address</label>
+          <div class="input-wrapper">
+            <input type="email" class="form-input" placeholder="Enter email address" required>
+            <div class="input-focus"></div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Phone Number</label>
+          <div class="input-wrapper">
+            <input type="tel" class="form-input" placeholder="Enter phone number">
+            <div class="input-focus"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">Role</label>
+          <div class="select-wrapper">
+            <select class="form-select" required>
+              <option value="">Select role</option>
+              <option value="admin">Admin</option>
+              <option value="manager">Manager</option>
+              <option value="developer">Developer</option>
+              <option value="designer">Designer</option>
+              <option value="tester">Tester</option>
+            </select>
+            <div class="select-arrow">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6,9 12,15 18,9"></polyline>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Department</label>
+          <div class="select-wrapper">
+            <select class="form-select" required>
+              <option value="">Select department</option>
+              <option value="engineering">Engineering</option>
+              <option value="design">Design</option>
+              <option value="marketing">Marketing</option>
+              <option value="sales">Sales</option>
+              <option value="hr">Human Resources</option>
+            </select>
+            <div class="select-arrow">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6,9 12,15 18,9"></polyline>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Profile Picture</label>
+        <div class="file-upload">
+          <input type="file" id="profile-pic" class="file-input" accept="image/*">
+          <label for="profile-pic" class="file-label">
+            <div class="upload-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7,10 12,15 17,10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+            </div>
+            <span class="upload-text">Click to upload</span>
+            <span class="upload-hint">PNG, JPG up to 5MB</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <button type="button" class="btn btn-secondary">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+          Cancel
+        </button>
+        <button type="submit" class="btn btn-primary">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+            <circle cx="9" cy="7" r="4"></circle>
+            <line x1="19" y1="8" x2="19" y2="14"></line>
+            <line x1="22" y1="11" x2="16" y2="11"></line>
+          </svg>
+          Add User
+        </button>
+      </div>
+    </form>
+  </div>
+
+</div>

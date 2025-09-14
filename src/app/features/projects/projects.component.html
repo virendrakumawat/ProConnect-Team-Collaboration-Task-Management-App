@@ -1,0 +1,340 @@
+<div class="projects-container" [ngClass]="{ 'darkMode': theme.themeMode() === 'dark', '': theme.themeMode() === 'light' }">
+        
+        <app-each-header [Heading]="'Projects'" [subHeading]="'Your Projects Overview'" [iconClass]="'fas fa-project-diagram'" [inputboxShow]="true" (newProjectClick)="openModal()"></app-each-header>
+        <div class="filter-tabs">
+            <button class="tab-btn active">All Projects</button>
+            <button class="tab-btn">Active</button>
+            <button class="tab-btn">Completed</button>
+            <button class="tab-btn">On Hold</button>
+        </div>
+
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="card-header">
+                    <div class="project-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <circle cx="9" cy="9" r="2"></circle>
+                            <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path>
+                        </svg>
+                    </div>
+                    <div class="project-status status-active">Active</div>
+                </div>
+                <div class="card-body">
+                    <h3 class="project-title">E-Commerce Platform</h3>
+                    <p class="project-description">Modern e-commerce solution with advanced features including real-time inventory management and AI-powered recommendations.</p>
+                    <div class="project-meta">
+                        <div class="meta-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                            <span>8 Members</span>
+                        </div>
+                        <div class="meta-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                            </svg>
+                            <span>Due: Dec 15, 2024</span>
+                        </div>
+                    </div>
+                    <div class="progress-section">
+                        <div class="progress-header">
+                            <span class="progress-label">Progress</span>
+                            <span class="progress-value">75%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    <div class="team-avatars">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=32&h=32&fit=crop&crop=face" alt="Team member" class="avatar">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=32&h=32&fit=crop&crop=face" alt="Team member" class="avatar">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=32&h=32&fit=crop&crop=face" alt="Team member" class="avatar">
+                        <div class="avatar-more">+5</div>
+                    </div>
+                </div>
+                <div class="card-actions">
+                    <button class="action-btn primary">View Details</button>
+                    <button class="action-btn secondary">Edit</button>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="card-header">
+                    <div class="project-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14,2 14,8 20,8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10,9 9,9 8,9"></polyline>
+                        </svg>
+                    </div>
+                    <div class="project-status status-completed">Completed</div>
+                </div>
+                <div class="card-body">
+                    <h3 class="project-title">Mobile Banking App</h3>
+                    <p class="project-description">Secure and user-friendly mobile banking application with biometric authentication and real-time transaction monitoring.</p>
+                    <div class="project-meta">
+                        <div class="meta-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                            <span>6 Members</span>
+                        </div>
+                        <div class="meta-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                            </svg>
+                            <span>Completed: Nov 28, 2024</span>
+                        </div>
+                    </div>
+                    <div class="progress-section">
+                        <div class="progress-header">
+                            <span class="progress-label">Progress</span>
+                            <span class="progress-value">100%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill completed" style="width: 100%"></div>
+                        </div>
+                    </div>
+                    <div class="team-avatars">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=32&h=32&fit=crop&crop=face" alt="Team member" class="avatar">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=32&h=32&fit=crop&crop=face" alt="Team member" class="avatar">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=32&h=32&fit=crop&crop=face" alt="Team member" class="avatar">
+                        <div class="avatar-more">+3</div>
+                    </div>
+                </div>
+                <div class="card-actions">
+                    <button class="action-btn primary">View Details</button>
+                    <button class="action-btn secondary">Archive</button>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="card-header">
+                    <div class="project-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                            <polyline points="2,17 12,22 22,17"></polyline>
+                            <polyline points="2,12 12,17 22,12"></polyline>
+                        </svg>
+                    </div>
+                    <div class="project-status status-on-hold">On Hold</div>
+                </div>
+                <div class="card-body">
+                    <h3 class="project-title">AI Analytics Dashboard</h3>
+                    <p class="project-description">Advanced analytics dashboard with machine learning insights and predictive analytics for business intelligence.</p>
+                    <div class="project-meta">
+                        <div class="meta-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                            <span>5 Members</span>
+                        </div>
+                        <div class="meta-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                            </svg>
+                            <span>Due: Jan 30, 2025</span>
+                        </div>
+                    </div>
+                    <div class="progress-section">
+                        <div class="progress-header">
+                            <span class="progress-label">Progress</span>
+                            <span class="progress-value">45%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill on-hold" style="width: 45%"></div>
+                        </div>
+                    </div>
+                    <div class="team-avatars">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=32&h=32&fit=crop&crop=face" alt="Team member" class="avatar">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=32&h=32&fit=crop&crop=face" alt="Team member" class="avatar">
+                        <div class="avatar-more">+3</div>
+                    </div>
+                </div>
+                <div class="card-actions">
+                    <button class="action-btn primary">View Details</button>
+                    <button class="action-btn secondary">Resume</button>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="card-header">
+                    <div class="project-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                            <polyline points="3.27,6.96 12,12.01 20.73,6.96"></polyline>
+                            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                        </svg>
+                    </div>
+                    <div class="project-status status-active">Active</div>
+                </div>
+                <div class="card-body">
+                    <h3 class="project-title">Cloud Infrastructure</h3>
+                    <p class="project-description">Scalable cloud infrastructure setup with microservices architecture and automated deployment pipelines.</p>
+                    <div class="project-meta">
+                        <div class="meta-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                            <span>4 Members</span>
+                        </div>
+                        <div class="meta-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                            </svg>
+                            <span>Due: Feb 20, 2025</span>
+                        </div>
+                    </div>
+                    <div class="progress-section">
+                        <div class="progress-header">
+                            <span class="progress-label">Progress</span>
+                            <span class="progress-value">60%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 60%"></div>
+                        </div>
+                    </div>
+                    <div class="team-avatars">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=32&h=32&fit=crop&crop=face" alt="Team member" class="avatar">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=32&h=32&fit=crop&crop=face" alt="Team member" class="avatar">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=32&h=32&fit=crop&crop=face" alt="Team member" class="avatar">
+                        <div class="avatar-more">+1</div>
+                    </div>
+                </div>
+                <div class="card-actions">
+                    <button class="action-btn primary">View Details</button>
+                    <button class="action-btn secondary">Edit</button>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="card-header">
+                    <div class="project-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                        </svg>
+                    </div>
+                    <div class="project-status status-active">Active</div>
+                </div>
+                <div class="card-body">
+                    <h3 class="project-title">Social Media Platform</h3>
+                    <p class="project-description">Next-generation social media platform with advanced privacy controls and AI-powered content moderation.</p>
+                    <div class="project-meta">
+                        <div class="meta-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                            <span>12 Members</span>
+                        </div>
+                        <div class="meta-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                            </svg>
+                            <span>Due: Mar 15, 2025</span>
+                        </div>
+                    </div>
+                    <div class="progress-section">
+                        <div class="progress-header">
+                            <span class="progress-label">Progress</span>
+                            <span class="progress-value">30%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 30%"></div>
+                        </div>
+                    </div>
+                    <div class="team-avatars">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=32&h=32&fit=crop&crop=face" alt="Team member" class="avatar">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=32&h=32&fit=crop&crop=face" alt="Team member" class="avatar">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=32&h=32&fit=crop&crop=face" alt="Team member" class="avatar">
+                        <div class="avatar-more">+9</div>
+                    </div>
+                </div>
+                <div class="card-actions">
+                    <button class="action-btn primary">View Details</button>
+                    <button class="action-btn secondary">Edit</button>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="card-header">
+                    <div class="project-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M9 12l2 2 4-4"></path>
+                            <path d="M21 12c-1 0-3-1-3-3s2-3 3-3 3 1 3 3-2 3-3 3"></path>
+                            <path d="M3 12c1 0 3-1 3-3s-2-3-3-3-3 1-3 3 2 3 3 3"></path>
+                            <path d="M12 3c0 1-1 3-3 3s-3-2-3-3 1-3 3-3 3 2 3 3"></path>
+                            <path d="M12 21c0-1 1-3 3-3s3 2 3 3-1 3-3 3-3-2-3-3"></path>
+                        </svg>
+                    </div>
+                    <div class="project-status status-completed">Completed</div>
+                </div>
+                <div class="card-body">
+                    <h3 class="project-title">Task Management System</h3>
+                    <p class="project-description">Comprehensive task management system with Kanban boards, time tracking, and team collaboration features.</p>
+                    <div class="project-meta">
+                        <div class="meta-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                            <span>7 Members</span>
+                        </div>
+                        <div class="meta-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                            </svg>
+                            <span>Completed: Oct 15, 2024</span>
+                        </div>
+                    </div>
+                    <div class="progress-section">
+                        <div class="progress-header">
+                            <span class="progress-label">Progress</span>
+                            <span class="progress-value">100%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill completed" style="width: 100%"></div>
+                        </div>
+                    </div>
+                    <div class="team-avatars">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=32&h=32&fit=crop&crop=face" alt="Team member" class="avatar">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=32&h=32&fit=crop&crop=face" alt="Team member" class="avatar">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=32&h=32&fit=crop&crop=face" alt="Team member" class="avatar">
+                        <div class="avatar-more">+4</div>
+                    </div>
+                </div>
+                <div class="card-actions">
+                    <button class="action-btn primary">View Details</button>
+                    <button class="action-btn secondary">Archive</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add Project Modal -->
+        <app-modal [isModalOpen]="isModalOpen" (close)="closeModal()" (submit)="handleNewProject($event)"></app-modal>
+    </div>

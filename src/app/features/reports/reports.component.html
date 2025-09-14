@@ -1,0 +1,259 @@
+<div class="projects-container" [ngClass]="{ 'darkMode': theme.themeMode() === 'dark', '': theme.themeMode() === 'light' }">
+
+  <app-each-header  [Heading]="'Analytics & Reports'" [subHeading]="'Track your teams performance and project insights'" [iconClass]="'fas fa-chart-line'" [inputboxShow]="false">
+
+
+    <div class="header-actions " style="float: right;">
+      <button class="btn-primary">
+        <i class="icon-download"></i>
+        Export Report
+      </button>
+      <button class="btn-secondary">
+        <i class="icon-filter"></i>
+        Filter
+      </button>
+    </div>
+
+  </app-each-header>
+   
+
+
+
+
+
+
+    <!-- Stats Cards -->
+  <div class="stats-grid">
+    <div class="stat-card card-1">
+      <div class="stat-icon">
+        <i class="icon-tasks"></i>
+      </div>
+      <div class="stat-content">
+        <h3 class="stat-number">247</h3>
+        <p class="stat-label">Total Tasks</p>
+        <span class="stat-change positive">+12% from last month</span>
+      </div>
+    </div>
+
+    <div class="stat-card card-2">
+      <div class="stat-icon">
+        <i class="icon-completed"></i>
+      </div>
+      <div class="stat-content">
+        <h3 class="stat-number">189</h3>
+        <p class="stat-label">Completed</p>
+        <span class="stat-change positive">+8% from last month</span>
+      </div>
+    </div>
+
+    <div class="stat-card card-3">
+      <div class="stat-icon">
+        <i class="icon-progress"></i>
+      </div>
+      <div class="stat-content">
+        <h3 class="stat-number">34</h3>
+        <p class="stat-label">In Progress</p>
+        <span class="stat-change neutral">Same as last month</span>
+      </div>
+    </div>
+
+    <div class="stat-card card-4">
+      <div class="stat-icon">
+        <i class="icon-team"></i>
+      </div>
+      <div class="stat-content">
+        <h3 class="stat-number">24</h3>
+        <p class="stat-label">Team Members</p>
+        <span class="stat-change positive">+3 new members</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Charts Section -->
+  <div class="charts-section">
+    <div class="chart-container large-chart">
+      <div class="chart-header">
+        <h3>Project Progress Overview</h3>
+        <div class="chart-controls">
+          <button class="chart-btn active">7D</button>
+          <button class="chart-btn">30D</button>
+          <button class="chart-btn">90D</button>
+        </div>
+      </div>
+      <div class="chart-content">
+        <div class="progress-chart">
+          <div class="chart-bars">
+            <div class="bar" style="height: 65%" data-value="65"></div>
+            <div class="bar" style="height: 78%" data-value="78"></div>
+            <div class="bar" style="height: 45%" data-value="45"></div>
+            <div class="bar" style="height: 89%" data-value="89"></div>
+            <div class="bar" style="height: 67%" data-value="67"></div>
+            <div class="bar" style="height: 92%" data-value="92"></div>
+            <div class="bar" style="height: 73%" data-value="73"></div>
+          </div>
+          <div class="chart-labels">
+            <span>Mon</span>
+            <span>Tue</span>
+            <span>Wed</span>
+            <span>Thu</span>
+            <span>Fri</span>
+            <span>Sat</span>
+            <span>Sun</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="chart-container small-chart">
+      <div class="chart-header">
+        <h3>Task Distribution</h3>
+      </div>
+      <div class="chart-content">
+        <div class="donut-chart">
+          <div class="donut-center">
+            <span class="donut-value">76%</span>
+            <span class="donut-label">Completed</span>
+          </div>
+        </div>
+        <div class="donut-legend">
+          <div class="legend-item">
+            <span class="legend-color completed"></span>
+            <span>Completed (76%)</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-color progress"></span>
+            <span>In Progress (14%)</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-color pending"></span>
+            <span>Pending (10%)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Team Performance -->
+  <div class="team-performance">
+    <div class="section-header">
+      <h3>Team Performance</h3>
+      <button class="view-all-btn">View All</button>
+    </div>
+    <div class="performance-grid">
+      <div class="performance-card">
+        <div class="member-info">
+          <div class="member-avatar">
+            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face" alt="John">
+          </div>
+          <div class="member-details">
+            <h4>John Smith</h4>
+            <p>Frontend Developer</p>
+          </div>
+        </div>
+        <div class="performance-stats">
+          <div class="stat">
+            <span class="stat-value">24</span>
+            <span class="stat-label">Tasks</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 85%"></div>
+          </div>
+          <span class="efficiency">85% Efficiency</span>
+        </div>
+      </div>
+
+      <div class="performance-card">
+        <div class="member-info">
+          <div class="member-avatar">
+            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=40&h=40&fit=crop&crop=face" alt="Sarah">
+          </div>
+          <div class="member-details">
+            <h4>Sarah Johnson</h4>
+            <p>UI/UX Designer</p>
+          </div>
+        </div>
+        <div class="performance-stats">
+          <div class="stat">
+            <span class="stat-value">18</span>
+            <span class="stat-label">Tasks</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 92%"></div>
+          </div>
+          <span class="efficiency">92% Efficiency</span>
+        </div>
+      </div>
+
+      <div class="performance-card">
+        <div class="member-info">
+          <div class="member-avatar">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face" alt="Mike">
+          </div>
+          <div class="member-details">
+            <h4>Mike Chen</h4>
+            <p>Backend Developer</p>
+          </div>
+        </div>
+        <div class="performance-stats">
+          <div class="stat">
+            <span class="stat-value">31</span>
+            <span class="stat-label">Tasks</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 78%"></div>
+          </div>
+          <span class="efficiency">78% Efficiency</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Recent Activity -->
+  <div class="recent-activity">
+    <div class="section-header">
+      <h3>Recent Activity</h3>
+      <button class="view-all-btn">View All</button>
+    </div>
+    <div class="activity-list">
+      <div class="activity-item">
+        <div class="activity-icon completed">
+          <i class="icon-check"></i>
+        </div>
+        <div class="activity-content">
+          <p><strong>Sarah Johnson</strong> completed task "Design Homepage Layout"</p>
+          <span class="activity-time">2 hours ago</span>
+        </div>
+      </div>
+
+      <div class="activity-item">
+        <div class="activity-icon progress">
+          <i class="icon-clock"></i>
+        </div>
+        <div class="activity-content">
+          <p><strong>Mike Chen</strong> started working on "API Integration"</p>
+          <span class="activity-time">4 hours ago</span>
+        </div>
+      </div>
+
+      <div class="activity-item">
+        <div class="activity-icon new">
+          <i class="icon-plus"></i>
+        </div>
+        <div class="activity-content">
+          <p><strong>John Smith</strong> created new task "Mobile Responsive Design"</p>
+          <span class="activity-time">6 hours ago</span>
+        </div>
+      </div>
+
+      <div class="activity-item">
+        <div class="activity-icon completed">
+          <i class="icon-check"></i>
+        </div>
+        <div class="activity-content">
+          <p><strong>Team</strong> completed milestone "Phase 1 Development"</p>
+          <span class="activity-time">1 day ago</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

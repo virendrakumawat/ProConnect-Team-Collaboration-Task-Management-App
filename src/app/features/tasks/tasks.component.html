@@ -1,0 +1,79 @@
+<div class="projects-container"  [ngClass]="{ 'darkMode': theme.themeMode() === 'dark', '': theme.themeMode() === 'light' }">
+
+  <app-each-header [Heading]="'Task Management'" [subHeading]="'Track and manage your teams tasks efficiently'" [iconClass]="'fas fa-tasks'" [inputboxShow]="true"></app-each-header>
+  
+  <div class="table-container">
+    <div class="table-wrapper">
+      <table class="tasks-table">
+        <thead>
+          <tr>
+            <th class="th-id">#</th>
+            <th class="th-task">Task Details</th>
+            <th class="th-assignee">Assignee</th>
+            <th class="th-priority">Priority</th>
+            <th class="th-status">Status</th>
+            <th class="th-progress">Progress</th>
+            <th class="th-due">Due Date</th>
+            <th class="th-actions">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let task of tasks; let i = index" class="task-row" [style.animation-delay.s]="0.8 + (i * 0.1)">
+            <td class="td-id">{{ task.id }}</td>
+            <td class="td-task">
+              <div class="task-info">
+                <h4 class="task-title">{{ task.title }}</h4>
+                <p class="task-description">{{ task.description }}</p>
+                <span class="task-project">{{ task.project }}</span>
+              </div>
+            </td>
+            <td class="td-assignee">
+              <div class="assignee-info">
+                <div class="assignee-avatar">{{ task.assignee.charAt(0) }}</div>
+                <span class="assignee-name">{{ task.assignee }}</span>
+              </div>
+            </td>
+            <td class="td-priority">
+              <span class="priority-badge" [ngClass]="getPriorityClass(task.priority)">
+                {{ task.priority }}
+              </span>
+            </td>
+            <td class="td-status">
+              <span class="status-badge" [ngClass]="getStatusClass(task.status)">
+                {{ task.status }}
+              </span>
+            </td>
+            <td class="td-progress">
+              <div class="progress-container">
+                <div class="progress-bar">
+                  <div class="progress-fill" [ngClass]="getProgressClass(task.progress)" 
+                       [style.width.%]="task.progress"></div>
+                </div>
+                <span class="progress-text">{{ task.progress }}%</span>
+              </div>
+            </td>
+            <td class="td-due">
+              <span class="due-date">{{ task.dueDate | date:'MMM dd' }}</span>
+            </td>
+            <td class="td-actions">
+              <div class="action-buttons">
+                <button class="btn-action btn-edit" title="Edit Task">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                    <path d="m18.5 2.5 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                  </svg>
+                </button>
+                <button class="btn-action btn-delete" title="Delete Task">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="3,6 5,6 21,6"></polyline>
+                    <path d="m19,6v14a2,2 0 0,1 -2,2H7a2,2 0 0,1 -2,-2V6m3,0V4a2,2 0 0,1 2,-2h4a2,2 0 0,1 2,2v2"></path>
+                  </svg>
+                </button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

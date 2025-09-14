@@ -1,0 +1,30 @@
+<div class="header-section" [ngClass]="{ 'darkMode': theme.themeMode() === 'dark', '': theme.themeMode() === 'light' }">
+            <div class="title-area">
+                <h1 class="page-title">
+                    <i [ngClass]="iconClass"></i>
+                    {{Heading}}
+                </h1>
+                <p class="subtitle">{{subHeading}}</p>
+            </div>
+           @if(inputboxShow)
+            {
+                <div class="header-actions" >
+                <div class="search-wrapper">
+                    <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <input type="text" placeholder="Search projects..." class="search-input">
+                </div>
+                <button class="btn-new-project" (click)="onNewProjectClick()">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                    New Project
+                </button>
+            </div>
+            
+            }
+            <ng-content></ng-content>
+        </div>

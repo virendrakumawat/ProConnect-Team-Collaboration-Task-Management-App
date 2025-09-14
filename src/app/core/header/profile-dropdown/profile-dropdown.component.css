@@ -1,0 +1,65 @@
+/* Profile start */
+.headerProfileSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.headerProfileSection button {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  gap: 10px;
+}
+
+.headerProfileSection button img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #D8D8D8;
+}
+
+.headerProfileSection .profile-name {
+  display: flex;
+  margin: 5px 0px 0px 10px;
+  color: var( --sidebar-hover-text) !important;
+}
+
+.headerProfileSection div h5 {
+  font-size: .9rem;
+  font-weight: 100;
+}
+
+.headerProfileSection div p {
+  font-size: .7rem;
+}
+
+/* ✅ Scoped menu override */
+::ng-deep .profile-menu {
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  margin-left: 71px;
+  margin-right: -37px;
+  margin-top: 13px;
+  height: 199px;
+}
+
+::ng-deep .profile-menu .mat-mdc-menu-content {
+  background-color: #fff !important;
+}
+
+::ng-deep .profile-menu .mat-mdc-menu-item {
+  color: #837e7e !important;
+  font-size: 13px;
+  border-bottom: 1px solid #837e7e4a;
+}
+
+
+
+
+.darkMode .headerProfileSection div h5 ,.darkMode .headerProfileSection div p{
+  color: #b4b1b1;
+}

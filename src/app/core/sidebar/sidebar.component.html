@@ -1,34 +1,46 @@
-<div [class.collapsed]="collapsed" class="sidebar">
+<div [class.collapsed]="collapsed" class="sidebar"[ngClass]="{ 'darkMode': theme.themeMode() === 'dark', '': theme.themeMode() === 'light' }">
 
 
   <ng-container *ngIf="!collapsed">
     <!-- Full Sidebar -->
 
     <div class="sidebar-header">
-        <h1><img src="/assest/logo/logo.png" alt="logo"/><span class="sidebar-text">Pro</span>Conn</h1>
+        <h1><img src="/assest/logo/logo.png" alt="logo" routerLink="/dashboard"/><span class="sidebar-text">
+
+          
+          Pro</span><span class="conn">Conn</span></h1>
     </div>
     <ul class="sidebar-without-collapsed">
-     <li><a href="#" class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
-     <li><a href="#"><i class="fas fa-box"></i> Products</a></li>
-     <li><a href="#"><i class="fas fa-heart"></i> Favorites</a></li>
-     <li><a href="#"><i class="fas fa-envelope"></i> Inbox</a></li>
-     <li><a href="#"><i class="fas fa-list"></i> Order Lists</a></li>
-     <li><a href="#"><i class="fas fa-cubes"></i> Product Stock</a></li>
-  
-  <p class="sidebar-section">Pages</p>
-  <li><a href="#"><i class="fas fa-gift"></i> Pricing</a></li>
-  <li><a href="#"><i class="fas fa-calendar"></i> Calendar</a></li>
-  <li><a href="#"><i class="fas fa-check-square"></i> To-Do</a></li>
-  <li><a href="#"><i class="fas fa-id-card"></i> Contact</a></li>
-  <li><a href="#"><i class="fas fa-file-invoice"></i> Invoice</a></li>
-  <li><a href="#"><i class="fas fa-layer-group"></i> UI Elements</a></li>
-  <li><a href="#"><i class="fas fa-users"></i> Team</a></li>
-  <li><a href="#"><i class="fas fa-th"></i> Table</a></li>
+   @for (group of SIDEBAR_ITEMS; track $index) {
+    <!-- Section Header -->
+    <p class="sidebar-section" *ngIf="group.section == 'Account'">{{ group.section }}</p>
 
-  <p class="sidebar-section"></p>
-  <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
-  <li><a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
-    </ul>
+    <!-- Items -->
+    @for (item of group.items; track $index) {
+      <li>
+        <a 
+          [routerLink]="item.route" 
+          routerLinkActive="active" 
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          <i [class]="item.icon"></i> {{ item.title }}
+        </a>
+      </li>
+    }
+  }
+           
+  <!-- <li><a routerLink="/projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
+  <li><a routerLink="/tasks"><i class="fas fa-tasks"></i> Tasks</a></li>
+  <li><a routerLink="/calendar"><i class="fas fa-calendar-alt"></i> Calendar</a></li>
+  <li><a routerLink="/inbox"><i class="fas fa-envelope"></i> Inbox</a></li>
+  <li><a routerLink="/teams"><i class="fas fa-users"></i> Teams</a></li>
+  <li><a routerLink="/files"><i class="fas fa-folder-open"></i> Files</a></li>
+  <li><a routerLink="/reports"><i class="fas fa-chart-line"></i> Reports</a></li>
+
+  <p class="sidebar-section">Account</p>
+  <li><a routerLink="/settings"><i class="fas fa-cog"></i> Settings</a></li>
+  <li><a routerLink="/logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li> -->
+</ul>
   </ng-container>
 
   <ng-container *ngIf="collapsed">
@@ -37,26 +49,35 @@
         <img src="/assest/logo/logo.png" alt="logo"/>
      </div>
         <ul class="sidebar-with-collapsed">
-     <li><a href="#" class="active"><i class="fas fa-tachometer-alt"></i> </a></li>
-     <li><a href="#"><i class="fas fa-box"></i> </a></li>
-     <li><a href="#"><i class="fas fa-heart"></i> </a></li>
-     <li><a href="#"><i class="fas fa-envelope"></i> </a></li>
-     <li><a href="#"><i class="fas fa-list"></i> </a></li>
-     <li><a href="#"><i class="fas fa-cubes"></i> </a></li>
-  
-  <p class="sidebar-section"></p>
-  <li><a href="#"><i class="fas fa-gift"></i></a></li>
-  <li><a href="#"><i class="fas fa-calendar"></i> </a></li>
-  <li><a href="#"><i class="fas fa-check-square"></i> </a></li>
-  <li><a href="#"><i class="fas fa-id-card"></i></a></li>
-  <li><a href="#"><i class="fas fa-file-invoice"></i></a></li>
-  <li><a href="#"><i class="fas fa-layer-group"></i></a></li>
-  <li><a href="#"><i class="fas fa-users"></i></a></li>
-  <li><a href="#"><i class="fas fa-th"></i></a></li>
+           @for (group of SIDEBAR_ITEMS; track $index) {
+    <!-- Section Header -->
+    <p class="sidebar-section" *ngIf="group.section == 'Account'"></p>
+
+    <!-- Items -->
+    @for (item of group.items; track $index) {
+      <li>
+        <a 
+          [routerLink]="item.route" 
+          routerLinkActive="active" 
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          <i [class]="item.icon"></i>
+        </a>
+      </li>
+    }
+  }
+      <!-- <li><a routerLink="/dashboard" class="active"><i class="fas fa-tachometer-alt"></i></a></li>
+  <li><a routerLink="/projects"><i class="fas fa-project-diagram"></i> </a></li>
+  <li><a routerLink="/tasks"><i class="fas fa-tasks"></i> </a></li>
+  <li><a routerLink="/calendar"><i class="fas fa-calendar-alt"></i></a></li>
+  <li><a routerLink="/inbox"><i class="fas fa-envelope"></i> </a></li>
+  <li><a routerLink="/teams"><i class="fas fa-users"></i> </a></li>
+  <li><a routerLink="/files"><i class="fas fa-folder-open"></i></a></li>
+  <li><a routerLink="/reports"><i class="fas fa-chart-line"></i></a></li>
 
   <p class="sidebar-section"></p>
-  <li><a href="#"><i class="fas fa-cog"></i></a></li>
-  <li><a href="#"><i class="fas fa-sign-out-alt"></i> </a></li>
+  <li><a routerLink="/settings"><i class="fas fa-cog"></i></a></li>
+  <li><a routerLink="/logout"><i class="fas fa-sign-out-alt"></i></a></li> -->
     </ul>
   </ng-container>
 </div>

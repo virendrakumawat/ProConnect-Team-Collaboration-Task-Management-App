@@ -1,0 +1,233 @@
+<div class="projects-container" [ngClass]="{ 'darkMode': theme.themeMode() === 'dark', '': theme.themeMode() === 'light' }">
+<div class="files-container">
+  <!-- Header Section -->
+  <div class="files-header">
+    <div class="header-content">
+      <h1 class="page-title">
+        <i class="fas fa-folder-open"></i>
+        File Manager
+      </h1>
+      <p class="page-subtitle">Organize and manage your project files</p>
+    </div>
+    <div class="header-actions">
+      <button class="btn btn-primary upload-btn">
+        <i class="fas fa-cloud-upload-alt"></i>
+        Upload Files
+      </button>
+      <button class="btn btn-secondary new-folder-btn">
+        <i class="fas fa-folder-plus"></i>
+        New Folder
+      </button>
+    </div>
+  </div>
+
+  <!-- Search and Filter Bar -->
+  <div class="search-filter-bar">
+    <div class="search-box">
+      <i class="fas fa-search"></i>
+      <input type="text" placeholder="Search files and folders..." class="search-input">
+    </div>
+    <div class="filter-options">
+      <select class="filter-select">
+        <option value="all">All Files</option>
+        <option value="documents">Documents</option>
+        <option value="images">Images</option>
+        <option value="videos">Videos</option>
+        <option value="audio">Audio</option>
+      </select>
+      <div class="view-toggle">
+        <button class="view-btn active" data-view="grid">
+          <i class="fas fa-th"></i>
+        </button>
+        <button class="view-btn" data-view="list">
+          <i class="fas fa-list"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Breadcrumb Navigation -->
+  <div class="breadcrumb-nav">
+    <div class="breadcrumb">
+      <span class="breadcrumb-item active">
+        <i class="fas fa-home"></i>
+        Home
+      </span>
+      <span class="breadcrumb-separator">/</span>
+      <span class="breadcrumb-item">Projects</span>
+      <span class="breadcrumb-separator">/</span>
+      <span class="breadcrumb-item">ProConnect</span>
+    </div>
+  </div>
+
+  <!-- Files Grid -->
+  <div class="files-grid">
+    <!-- Folder Items -->
+    <div class="file-item folder-item" data-type="folder">
+      <div class="file-icon">
+        <i class="fas fa-folder"></i>
+      </div>
+      <div class="file-info">
+        <h3 class="file-name">Documents</h3>
+        <p class="file-details">24 items</p>
+      </div>
+      <div class="file-actions">
+        <button class="action-btn">
+          <i class="fas fa-ellipsis-v"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="file-item folder-item" data-type="folder">
+      <div class="file-icon">
+        <i class="fas fa-folder"></i>
+      </div>
+      <div class="file-info">
+        <h3 class="file-name">Images</h3>
+        <p class="file-details">12 items</p>
+      </div>
+      <div class="file-actions">
+        <button class="action-btn">
+          <i class="fas fa-ellipsis-v"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="file-item folder-item" data-type="folder">
+      <div class="file-icon">
+        <i class="fas fa-folder"></i>
+      </div>
+      <div class="file-info">
+        <h3 class="file-name">Videos</h3>
+        <p class="file-details">8 items</p>
+      </div>
+      <div class="file-actions">
+        <button class="action-btn">
+          <i class="fas fa-ellipsis-v"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- File Items -->
+    <div class="file-item" data-type="pdf">
+      <div class="file-icon pdf">
+        <i class="fas fa-file-pdf"></i>
+      </div>
+      <div class="file-info">
+        <h3 class="file-name">Project Requirements.pdf</h3>
+        <p class="file-details">2.4 MB • Modified 2 hours ago</p>
+      </div>
+      <div class="file-actions">
+        <button class="action-btn">
+          <i class="fas fa-ellipsis-v"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="file-item" data-type="docx">
+      <div class="file-icon docx">
+        <i class="fas fa-file-word"></i>
+      </div>
+      <div class="file-info">
+        <h3 class="file-name">Meeting Notes.docx</h3>
+        <p class="file-details">1.2 MB • Modified 1 day ago</p>
+      </div>
+      <div class="file-actions">
+        <button class="action-btn">
+          <i class="fas fa-ellipsis-v"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="file-item" data-type="xlsx">
+      <div class="file-icon xlsx">
+        <i class="fas fa-file-excel"></i>
+      </div>
+      <div class="file-info">
+        <h3 class="file-name">Budget Analysis.xlsx</h3>
+        <p class="file-details">856 KB • Modified 3 days ago</p>
+      </div>
+      <div class="file-actions">
+        <button class="action-btn">
+          <i class="fas fa-ellipsis-v"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="file-item" data-type="pptx">
+      <div class="file-icon pptx">
+        <i class="fas fa-file-powerpoint"></i>
+      </div>
+      <div class="file-info">
+        <h3 class="file-name">Project Presentation.pptx</h3>
+        <p class="file-details">5.2 MB • Modified 1 week ago</p>
+      </div>
+      <div class="file-actions">
+        <button class="action-btn">
+          <i class="fas fa-ellipsis-v"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="file-item" data-type="jpg">
+      <div class="file-icon image">
+        <i class="fas fa-file-image"></i>
+      </div>
+      <div class="file-info">
+        <h3 class="file-name">team-photo.jpg</h3>
+        <p class="file-details">3.1 MB • Modified 2 weeks ago</p>
+      </div>
+      <div class="file-actions">
+        <button class="action-btn">
+          <i class="fas fa-ellipsis-v"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="file-item" data-type="mp4">
+      <div class="file-icon video">
+        <i class="fas fa-file-video"></i>
+      </div>
+      <div class="file-info">
+        <h3 class="file-name">demo-video.mp4</h3>
+        <p class="file-details">15.7 MB • Modified 1 month ago</p>
+      </div>
+      <div class="file-actions">
+        <button class="action-btn">
+          <i class="fas fa-ellipsis-v"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="file-item" data-type="zip">
+      <div class="file-icon archive">
+        <i class="fas fa-file-archive"></i>
+      </div>
+      <div class="file-info">
+        <h3 class="file-name">project-backup.zip</h3>
+        <p class="file-details">45.2 MB • Modified 2 months ago</p>
+      </div>
+      <div class="file-actions">
+        <button class="action-btn">
+          <i class="fas fa-ellipsis-v"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Upload Drop Zone -->
+  <div class="upload-dropzone">
+    <div class="dropzone-content">
+      <i class="fas fa-cloud-upload-alt"></i>
+      <h3>Drop files here to upload</h3>
+      <p>or click to browse files</p>
+    </div>
+  </div>
+
+  <!-- Loading Spinner -->
+  <div class="loading-spinner">
+    <div class="spinner"></div>
+    <p>Loading files...</p>
+  </div>
+</div>
+</div>

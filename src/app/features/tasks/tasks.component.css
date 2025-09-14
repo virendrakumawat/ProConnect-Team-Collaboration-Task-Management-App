@@ -1,0 +1,392 @@
+.tasks-container {
+  padding: 24px;
+  background: none;
+  min-height: 100vh;
+  animation: fadeInUp 0.6s ease-out;
+}
+.darkMode h1{
+  color: #f3ecec;
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tasks-header {
+  margin-bottom: 32px;
+  animation: slideInLeft 0.8s ease-out 0.2s both;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.tasks-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 8px 0;
+}
+
+.tasks-subtitle {
+  color: #64748b;
+  font-size: 16px;
+  margin: 0;
+}
+.darkMode .table-container{
+  background: var(--darkMode-bg);
+}
+.table-container {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  animation: scaleIn 0.8s ease-out 0.4s both;
+}
+
+.darkMode .form-container{
+  background: var(--darkMode-bg);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.tasks-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tasks-table th {
+  background: #f1f5f9;
+  padding: 16px 12px;
+  text-align: left;
+  font-weight: 600;
+  color: #475569;
+  font-size: 14px;
+  border-bottom: 1px solid #e2e8f0;
+  animation: slideInDown 0.6s ease-out 0.6s both;
+}
+.darkMode .tasks-table th{
+  background-color:#1e293b;
+  color:#f3ecec;
+}
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tasks-table td {
+  padding: 16px 12px;
+  border-bottom: 1px solid #f1f5f9;
+  vertical-align: top;
+}
+
+.task-row {
+  animation: fadeInRow 0.6s ease-out both;
+  transition: all 0.3s ease;
+}
+
+.task-row:hover {
+  background: #f8fafc;
+  transform: translateX(4px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.darkMode .task-row:hover{
+  background-color:#4b5167;
+}
+
+@keyframes fadeInRow {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.td-id {
+  font-weight: 600;
+  color: #64748b;
+  width: 60px;
+}
+
+.task-info {
+  max-width: 300px;
+}
+
+.task-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0 0 4px 0;
+}
+.darkMode .task-title{
+  color: #f3ecec;
+}
+
+.task-description {
+  font-size: 13px;
+  color: #64748b;
+  margin: 0 0 8px 0;
+  line-height: 1.4;
+}
+
+.task-project {
+  font-size: 12px;
+  color: #3b82f6;
+  background: #eff6ff;
+  padding: 2px 8px;
+  border-radius: 12px;
+}
+
+.assignee-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.assignee-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #3b82f6;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.assignee-avatar:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.assignee-name {
+  font-size: 14px;
+  color: #1e293b;
+}
+
+.darkMode .assignee-name{
+  color: #f3ecec;
+}
+.priority-badge, .status-badge {
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.darkMode .priority-badge, .darkMode .status-badge{
+  color: #f3ecec;
+}
+.priority-high {
+  background: #fef2f2;
+  color: #dc2626;
+}
+.darkMode .priority-high{
+  background-color: #7f1d1d;
+  color: #fee2e2;
+}
+
+.priority-medium {
+  background: #fef3c7;
+  color: #d97706;
+}
+.darkMode .priority-medium{
+  background-color: #78350f;
+  color: #ffedd5;
+}
+.priority-low {
+  background: #f0fdf4;
+  color: #16a34a;
+}
+.darkMode .priority-low{
+  background-color: #14532d;
+  color: #dcfce7;
+}
+
+.status-todo {
+  background: #f1f5f9;
+  color: #64748b;
+}
+.darkMode .status-todo{
+  background-color: #334155;
+  color: #cbd5e1;
+}
+.status-in-progress {
+  background: #eff6ff;
+  color: #2563eb;
+}
+.darkMode .status-in-progress{
+  background-color: #1e40af;
+  color: #dbeafe;
+}
+.status-completed {
+  background: #f0fdf4;
+  color: #16a34a;
+}
+.darkMode .status-completed{
+  background-color: #14532d;
+  color: #dcfce7;
+}
+.progress-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 120px;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 8px;
+  background: #f1f5f9;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.8s ease;
+  animation: progressGrow 1.2s ease-out 1s both;
+}
+
+@keyframes progressGrow {
+  from {
+    width: 0 !important;
+  }
+}
+
+.progress-low {
+  background: #dc2626;
+}
+
+.progress-medium {
+  background: #d97706;
+}
+
+.progress-high {
+  background: #16a34a;
+}
+
+.progress-text {
+  font-size: 12px;
+  font-weight: 600;
+  color: #64748b;
+  min-width: 32px;
+}
+
+.due-date {
+  font-size: 14px;
+  color: #64748b;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-action {
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-action::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+}
+
+.btn-action:hover::before {
+  width: 100%;
+  height: 100%;
+}
+
+.btn-edit {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.btn-edit:hover {
+  background: #dbeafe;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+.btn-delete {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.btn-delete:hover {
+  background: #fee2e2;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.2);
+}
+
+@media (max-width: 768px) {
+  .tasks-container {
+    padding: 16px;
+  }
+  
+  .tasks-table th,
+  .tasks-table td {
+    padding: 12px 8px;
+  }
+  
+  .task-info {
+    max-width: 200px;
+  }
+}

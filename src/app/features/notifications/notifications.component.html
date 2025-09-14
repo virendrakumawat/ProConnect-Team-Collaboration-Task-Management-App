@@ -1,0 +1,164 @@
+<div class="projects-container" [ngClass]="{ 'darkMode': theme.themeMode() === 'dark', '': theme.themeMode() === 'light' }" >
+
+  <app-each-header  [Heading]="'Notifications'" [subHeading]="''" [iconClass]="'fas fa-bell'" [inputboxShow]="false">
+
+
+      <div class="header-actions">
+        <button class="mark-all-read">Mark all as read</button>
+        <button class="settings-btn">⚙️</button>
+      </div>
+  </app-each-header>
+
+
+
+  
+<div class="notifications-container" [ngClass]="{ 'darkMode': theme.themeMode() === 'dark', '': theme.themeMode() === 'light' }">
+
+  <div class="notifications-list">
+    <!-- New Task Assignment -->
+    <div class="notification-item new">
+      <div class="notification-avatar">
+        <div class="avatar-circle task">
+          <i class="icon">📋</i>
+        </div>
+        <div class="status-indicator new"></div>
+      </div>
+      <div class="notification-content">
+        <div class="notification-header">
+          <h4 class="notification-title">New Task Assigned</h4>
+          <span class="notification-time">2 min ago</span>
+        </div>
+        <p class="notification-message">
+          You have been assigned to <strong>"Design System Implementation"</strong> by Sarah Johnson
+        </p>
+        <div class="notification-actions">
+          <button class="action-btn primary">View Task</button>
+          <button class="action-btn secondary">Dismiss</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Team Mention -->
+    <div class="notification-item">
+      <div class="notification-avatar">
+        <div class="avatar-circle mention">
+          <i class="icon">💬</i>
+        </div>
+        <div class="status-indicator"></div>
+      </div>
+      <div class="notification-content">
+        <div class="notification-header">
+          <h4 class="notification-title">Mentioned in Discussion</h4>
+          <span class="notification-time">15 min ago</span>
+        </div>
+        <p class="notification-message">
+          <strong>Alex Chen</strong> mentioned you in <strong>"Project Timeline Review"</strong>
+        </p>
+        <div class="notification-preview">
+          "&#64;john what are your thoughts on the new deadline?"
+        </div>
+        <div class="notification-actions">
+          <button class="action-btn primary">Reply</button>
+          <button class="action-btn secondary">View Thread</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project Update -->
+    <div class="notification-item">
+      <div class="notification-avatar">
+        <div class="avatar-circle update">
+          <i class="icon">🚀</i>
+        </div>
+        <div class="status-indicator"></div>
+      </div>
+      <div class="notification-content">
+        <div class="notification-header">
+          <h4 class="notification-title">Project Milestone Completed</h4>
+          <span class="notification-time">1 hour ago</span>
+        </div>
+        <p class="notification-message">
+          <strong>"Frontend Development Phase"</strong> has been marked as complete
+        </p>
+        <div class="progress-indicator">
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 75%"></div>
+          </div>
+          <span class="progress-text">75% Complete</span>
+        </div>
+        <div class="notification-actions">
+          <button class="action-btn primary">View Project</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Deadline Reminder -->
+    <div class="notification-item urgent">
+      <div class="notification-avatar">
+        <div class="avatar-circle deadline">
+          <i class="icon">⏰</i>
+        </div>
+        <div class="status-indicator urgent"></div>
+      </div>
+      <div class="notification-content">
+        <div class="notification-header">
+          <h4 class="notification-title">Deadline Approaching</h4>
+          <span class="notification-time">3 hours ago</span>
+        </div>
+        <p class="notification-message">
+          <strong>"API Integration"</strong> is due in 2 days
+        </p>
+        <div class="deadline-info">
+          <div class="deadline-badge">
+            <span class="deadline-text">Due: Dec 15, 2024</span>
+          </div>
+        </div>
+        <div class="notification-actions">
+          <button class="action-btn urgent">Update Status</button>
+          <button class="action-btn secondary">Extend Deadline</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Team Invitation -->
+    <div class="notification-item read">
+      <div class="notification-avatar">
+        <div class="avatar-circle invite">
+          <i class="icon">👥</i>
+        </div>
+      </div>
+      <div class="notification-content">
+        <div class="notification-header">
+          <h4 class="notification-title">Team Invitation</h4>
+          <span class="notification-time">1 day ago</span>
+        </div>
+        <p class="notification-message">
+          You've been invited to join <strong>"Mobile App Development"</strong> team
+        </p>
+        <div class="team-info">
+          <div class="team-members">
+            <div class="member-avatar">👤</div>
+            <div class="member-avatar">👤</div>
+            <div class="member-avatar">👤</div>
+            <span class="member-count">+5 members</span>
+          </div>
+        </div>
+        <div class="notification-actions">
+          <button class="action-btn success">Accept</button>
+          <button class="action-btn secondary">Decline</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="notifications-footer">
+    <button class="load-more-btn">
+      <span class="loading-spinner"></span>
+      Load More Notifications
+    </button>
+  </div>
+</div>
+  </div>
+
+
+

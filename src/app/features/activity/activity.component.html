@@ -1,0 +1,113 @@
+<div class="projects-container">
+
+  <app-each-header></app-each-header>
+  </div>
+
+
+
+
+<div class="activity-container">
+  <div class="activity-header">
+    <h2>Activity Feed</h2>
+    <div class="filter-tabs">
+      <button class="tab active">All</button>
+      <button class="tab">Tasks</button>
+      <button class="tab">Comments</button>
+      <button class="tab">Files</button>
+    </div>
+  </div>    
+
+  <div class="activity-feed">
+    <div class="activity-item">
+      <div class="activity-avatar">
+        <img src="https://via.placeholder.com/40" alt="User">
+      </div>
+      <div class="activity-content">
+        <div class="activity-header-info">
+          <span class="user-name">John Doe</span>
+          <span class="activity-action">completed task</span>
+          <span class="task-name">"Design Homepage"</span>
+        </div>
+        <div class="activity-time">2 minutes ago</div>
+      </div>
+      <div class="activity-icon completed">
+        <i class="fas fa-check"></i>
+      </div>
+    </div>
+
+    <div class="activity-item">
+      <div class="activity-avatar">
+        <img src="https://via.placeholder.com/40" alt="User">
+      </div>
+      <div class="activity-content">
+        <div class="activity-header-info">
+          <span class="user-name">Sarah Wilson</span>
+          <span class="activity-action">commented on</span>
+          <span class="task-name">"API Integration"</span>
+        </div>
+        <div class="activity-message">"Great progress on the authentication module!"</div>
+        <div class="activity-time">15 minutes ago</div>
+      </div>
+      <div class="activity-icon comment">
+        <i class="fas fa-comment"></i>
+      </div>
+    </div>
+
+    <div class="activity-item">
+      <div class="activity-avatar">
+        <img src="https://via.placeholder.com/40" alt="User">
+      </div>
+      <div class="activity-content">
+        <div class="activity-header-info">
+          <span class="user-name">Mike Johnson</span>
+          <span class="activity-action">uploaded file</span>
+          <span class="file-name">design-mockups.pdf</span>
+        </div>
+        <div class="activity-time">1 hour ago</div>
+      </div>
+      <div class="activity-icon file">
+        <i class="fas fa-file"></i>
+      </div>
+    </div>
+
+    <div class="activity-item">
+      <div class="activity-avatar">
+        <img src="https://via.placeholder.com/40" alt="User">
+      </div>
+      <div class="activity-content">
+        <div class="activity-header-info">
+          <span class="user-name">Emma Davis</span>
+          <span class="activity-action">created task</span>
+          <span class="task-name">"User Testing"</span>
+        </div>
+        <div class="activity-time">3 hours ago</div>
+      </div>
+      <div class="activity-icon created">
+        <i class="fas fa-plus"></i>
+      </div>
+    </div>
+
+    <div class="activity-item">
+      <div class="activity-avatar">
+        <img src="https://via.placeholder.com/40" alt="User">
+      </div>
+      <div class="activity-content">
+        <div class="activity-header-info">
+          <span class="user-name">Alex Chen</span>
+          <span class="activity-action">assigned</span>
+          <span class="task-name">"Database Optimization"</span>
+          <span class="activity-action">to</span>
+          <span class="user-name">David Kim</span>
+        </div>
+        <div class="activity-time">5 hours ago</div>
+      </div>
+      <div class="activity-icon assigned">
+        <i class="fas fa-user-plus"></i>
+      </div>
+    </div>
+  </div>
+
+  <div class="load-more">
+    <button class="load-more-btn">Load More Activities</button>
+  </div>
+</div>

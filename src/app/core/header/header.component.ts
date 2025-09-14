@@ -1,35 +1,30 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, HostListener, Output } from '@angular/core';
+import { Component, EventEmitter, HostListener, Output, ViewEncapsulation } from '@angular/core';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
+import { ProfileDropdownComponent } from './profile-dropdown/profile-dropdown.component';
+import { LanguageComponent } from './language/language.component';
+import { NotificationDropdownComponent } from './notification-dropdown/notification-dropdown.component';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import {ThemePalette} from '@angular/material/core';
+import { ThemeService } from '../../services/theme.service';
 
 @Component({
   selector: 'app-header',
-  imports: [CommonModule],
+  imports: [CommonModule ,ProfileDropdownComponent,NotificationDropdownComponent,MatSlideToggleModule],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
+  styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent {
  @Output() toggleSidebar = new EventEmitter<void>();
-  isDropdownOpen: boolean = false;
-  country:any=[
-  { code: 'en', name: 'English', flag: '/assest/flag/uk.png' },
-  { code: 'es', name: 'Español', flag: '/assest/flag/de.png' },
-  { code: 'fr', name: 'Français', flag: '/assest/flag/fr.png' }
-  ]
+
+  
+  constructor(public theme:ThemeService){ 
+
+  }
 
   toggle() {
    console.log('Header: Button clicked'); 
     this.toggleSidebar.emit();
   }
-  selectedLanguage = this.country[0];
-
-  toggleDropdown() {
-    console.log("clic")
-    this.isDropdownOpen = !this.isDropdownOpen;
-  }
-
-  selectLanguage(lang: any) {
-    this.selectedLanguage = lang;
-    this.isDropdownOpen = false; // close after selecting
-  }
-  
 }

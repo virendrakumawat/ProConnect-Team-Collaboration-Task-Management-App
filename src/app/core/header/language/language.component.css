@@ -1,0 +1,69 @@
+.languageSelection button {
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+  cursor: pointer;
+  
+}
+
+.languageSelection button img,
+.languageSelectionImage img {
+  width: 31px;
+  border-radius: 2px;
+}
+
+/* ✅ Scoped menu override */
+::ng-deep .language-menu {
+  border-radius: 12px;
+  width: 150px;
+  margin-top: 13px;
+  min-height: 151px;
+  max-height: 151px;
+}
+
+::ng-deep .language-menu .mat-mdc-menu-content {
+  background-color: #fff;
+}
+
+
+::ng-deep .language-menu .mat-mdc-menu-item {
+  color: #837e7e;
+  font-size: 13px;
+  margin: 0px;
+  min-height: 36px;
+}
+
+::ng-deep .language-menu .check-icon {
+  margin-left: auto;
+  font-size: 18px;
+  color: #333;
+}
+
+.languagecontentdiv {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 15px;
+}
+.languagecontentdiv img {
+  width: 24px;
+}
+.languagecontentdiv span {
+  font-size: .8rem;
+}
+.languagecontentdiv .check-icon {
+  font-size: 1rem;
+  padding-top: 10px;
+}
+
+
+
+
+
+/*  Dark Mode */
+.darkMode .languageSelection button{
+  color: #b4b1b1;
+}

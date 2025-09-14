@@ -1,17 +1,6 @@
  :root {
   --sidebar-width: 250px;
   --sidebar-collapsed-width: 60px;
-
-  --sidebar-bg: #fff;                /* Sidebar background */
-  --sidebar-border: #eee;            /* Sidebar right border */
-  --sidebar-text: #000000;              /* Normal text color */
-  --sidebar-hover-bg: #f4f6f9;       /* Hover background */
-  --sidebar-hover-text: #4a90e2;     /* Hover text color */
-  --sidebar-active-bg: #4a90e2;      /* Active item background */
-  --sidebar-active-text: #fff;       /* Active item text color */
-  --sidebar-active-border: #4a90e2;  /* Left active border */
-  --sidebar-section-text: #545454;   /* Section header text */
-  --sidebar-section-border: #54545445; /* Section border */
 }
  
    
@@ -20,22 +9,14 @@
    Change values here to update theme colors across sidebar
 ================================ */
 
-
-
 /* ================================
    Sidebar Container
 ================================ */
 .sidebar {
-  width: var(--sidebar-width);
-  /* min-height: 100vh; */
+  transition: background 0.5s ease, color 0.5s ease;
   background: var(--sidebar-bg);
-  overflow: hidden;
-}
-
-/* Collapsed sidebar */
-.sidebar.collapsed {
-  width: var(--sidebar-collapsed-width);
-
+ /* background: linear-gradient(135deg, #ffffff 0%, #4a90e2 100%);  */
+  height:auto;
 }
 
 
@@ -60,6 +41,9 @@
 .sidebar-header h1 span {
   color: var(--sidebar-hover-text);
 }
+.sidebar-header h1 .conn{
+  color: #000;
+}
 
 .sidebar-header img {
   width: 40px;
@@ -70,8 +54,9 @@
 ================================ */
 .sidebar-without-collapsed {
   list-style: none;
-  margin: 20px 0;
-  padding: 0;
+  /* margin: 20px 0; */
+  /* margin-top: 20px; */
+  padding: 1px;
 }
 
 .sidebar-without-collapsed li {
@@ -105,6 +90,14 @@
   position: relative;
 }
 
+.darkMode .sidebar-without-collapsed li a.active{
+  background: var(--sidebar-dark-active-bg);
+  color :var(--sidebar-dark-hover-text);
+}
+.darkMode .sidebar-without-collapsed li a.active::before {
+   background: var(--sidebar-dark-active-bg);
+}
+
 .sidebar-without-collapsed li a.active::before {
   content: "";
   position: absolute;
@@ -129,6 +122,9 @@
   padding-top: 16px;
   padding-bottom: 10px;
 }
+.darkMode .sidebar-section {
+  color: #545454;
+}
 
 /* ================================
    Collapsed Sidebar
@@ -137,7 +133,7 @@
   display: flex;
   align-items: center;
   justify-content: start;
-  margin: 15px 6px;
+  padding: 15px 6px;
 }
 
 .collapsed-sidebar-header img {
@@ -146,7 +142,8 @@
 
 .sidebar-with-collapsed {
   list-style: none;
-  margin: 66px 0;
+  margin-top: 5px;
+  padding: 1px;
 }
 
 .sidebar-with-collapsed li {
@@ -178,3 +175,15 @@
 
 
 
+
+
+/*  DarkMode */
+ /* --darkModeColor:#0F172A; */
+  /* --darkModetextColor:#b4b1b1; */
+
+.darkMode{
+  background:var(--sidebar-dark-bg);
+}
+.darkMode .sidebar-header h1 .conn{
+  color: #b4b1b1;
+}

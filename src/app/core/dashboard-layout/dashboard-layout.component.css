@@ -1,10 +1,60 @@
-.flex {
-  display: flex;
+.layout {
+  display: grid;
+  grid-template-columns: 250px 1fr; /* Sidebar + Content */
+  grid-template-rows: auto 1fr auto; /* Header, Content, Footer */
+  min-height: 100vh;
+  transition: grid-template-columns 0.5s ease;
 }
-
+.layout.collapsed {
+  grid-template-columns: 60px 1fr; /* Collapsed Sidebar + Content */
+}
 .content {
   flex: 1;
-  transition: 0.9s;
-  /* background-color:red;         👈 This is what flex-1 means */
-  /* padding: 1rem;   optional */
+  transition: background 0.5s ease, color 0.5s ease;
+   display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+      width: 100%;
+    min-width: 200px;
+}
+
+app-sidebar{
+  width: 250px;
+  /* min-height: 100vh; */
+  overflow: hidden;
+  transition: 0.5s ease;
+   position: sticky;
+   left:0;
+   top: 0;
+   height: 100vh;
+   overflow-y: auto;
+   bottom: 0;
+}
+app-sidebar::-webkit-scrollbar {
+  display: none;
+}
+
+app-header{
+  position: sticky;
+  top: 0;
+  left: 250px;
+  z-index: 100;
+  width: 100%;
+}
+
+.collapsed app-sidebar{
+  width: 60px;
+}
+
+
+
+
+
+
+.darkMode {
+  background-color: #1b2341c2;
+}
+
+app-footer{
+  margin-top: auto;        /* pushes footer to the bottom */
 }

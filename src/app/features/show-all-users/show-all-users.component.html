@@ -1,0 +1,104 @@
+<div class="projects-container" [ngClass]="{ 'darkMode': theme.themeMode() === 'dark', '': theme.themeMode() === 'light' }">
+
+  <app-each-header [Heading]="'Team Members'" [subHeading]="'Connect and collaborate with your team'" [iconClass]="'fa-solid fa-users'" [inputboxShow]="true"></app-each-header>
+  
+   <div class="members-grid">
+    <div class="member-card">
+      <div class="card-header">
+        <div class="avatar-container">
+          <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face" alt="John Doe" class="avatar">
+          <span class="status-badge online"></span>
+        </div>
+        <div class="member-details">
+          <h3 class="member-name">John Doe</h3>
+          <span class="member-role">Frontend Developer</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="member-email">john.doe&#64;company.com</p>
+        <div class="member-stats">
+          <span class="stat">12 Projects</span>
+          <span class="stat">Active</span>
+        </div>
+      </div>
+      <div class="card-actions">
+        <button class="action-btn primary">Message</button>
+        <button class="action-btn secondary">Profile</button>
+      </div>
+    </div>
+
+    <div class="member-card">
+      <div class="card-header">
+        <div class="avatar-container">
+          <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face" alt="Jane Smith" class="avatar">
+          <span class="status-badge away"></span>
+        </div>
+        <div class="member-details">
+          <h3 class="member-name">Jane Smith</h3>
+          <span class="member-role">UI/UX Designer</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="member-email">jane.smith&#64;company.com</p>
+        <div class="member-stats">
+          <span class="stat">8 Projects</span>
+          <span class="stat">Away</span>
+        </div>
+      </div>
+      <div class="card-actions">
+        <button class="action-btn primary">Message</button>
+        <button class="action-btn secondary">Profile</button>
+      </div>
+    </div>
+
+    <div class="member-card">
+      <div class="card-header">
+        <div class="avatar-container">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face" alt="Mike Johnson" class="avatar">
+          <span class="status-badge offline"></span>
+        </div>
+        <div class="member-details">
+          <h3 class="member-name">Mike Johnson</h3>
+          <span class="member-role">Backend Developer</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="member-email">mike.johnson&#64;company.com</p>
+        <div class="member-stats">
+          <span class="stat">15 Projects</span>
+          <span class="stat">Offline</span>
+        </div>
+      </div>
+      <div class="card-actions">
+        <button class="action-btn primary">Message</button>
+        <button class="action-btn secondary">Profile</button>
+      </div>
+    </div>
+
+    <div class="member-card">
+      <div class="card-header">
+        <div class="avatar-container">
+          <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face" alt="Sarah Wilson" class="avatar">
+          <span class="status-badge online"></span>
+        </div>
+        <div class="member-details">
+          <h3 class="member-name">Sarah Wilson</h3>
+          <span class="member-role">Project Manager</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="member-email">sarah.wilson&#64;company.com</p>
+        <div class="member-stats">
+          <span class="stat">20 Projects</span>
+          <span class="stat">Active</span>
+        </div>
+      </div>
+      <div class="card-actions">
+        <button class="action-btn primary">Message</button>
+        <button class="action-btn secondary">Profile</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+

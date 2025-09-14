@@ -1,0 +1,23 @@
+<!-- notification.component.html -->
+<div class="notification-wrapper">
+  <button   class="notification-btn" (click)="toggleDropdown()">
+     <i class="fa fa-bell" aria-hidden="true"></i>
+    <span class="badge">{{ notifications.length }}</span>
+  </button>
+
+  <div class="dropdown dropdown-menu" *ngIf="isOpen">
+    <div class="dropdown-header">Notifications</div>
+    <ul>
+      <li *ngFor="let item of notifications">
+        <i [class]="item.icon" [style.background]="item.color" class="notification-icon"></i>
+        <div class="content">
+          <h5>{{ item.title }}</h5>
+          <p>{{ item.message }}</p>
+        </div>
+      </li>
+    </ul>
+    <div class="dropdown-footer">
+      <a>See all notifications</a>
+    </div>
+  </div>
+</div>

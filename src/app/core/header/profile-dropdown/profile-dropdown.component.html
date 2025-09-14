@@ -1,0 +1,16 @@
+  <!-- profile  -->
+    <div class="headerProfileSection">
+    <button mat-button [matMenuTriggerFor]="menu"  class="profile-name" >
+      <img src="/assest/profile/image.png" alt="profile">
+          <div style="text-align: left;">
+            <h5 style="margin: 0px;">Moni Roy</h5>
+            <p style="margin: 0px;">Admin</p>  
+          </div>
+    </button>
+    <mat-menu #menu="matMenu"  panelClass="profile-menu">
+      <button mat-menu-item *ngFor="let item of menuItems">
+        <mat-icon [style.color]="item.color">{{item.icon}}</mat-icon>
+        <span>{{item.label}}</span>
+      </button>
+    </mat-menu>
+    </div>

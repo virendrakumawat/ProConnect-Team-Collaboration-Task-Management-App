@@ -1,0 +1,49 @@
+<div class="projects-container" [ngClass]="{ 'darkMode': theme.themeMode() === 'dark', '': theme.themeMode() === 'light' }">
+
+  <app-each-header  [Heading]="'Calendar'" [subHeading]="'Your Yearly calendar'" [iconClass]="'fas fa-calendar-alt'" [inputboxShow]="false"></app-each-header>
+  <div class="calendar-container">
+  <div class="calendar-header">
+    <button class="nav-btn" (click)="previousMonth()">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polyline points="15,18 9,12 15,6"></polyline>
+      </svg>
+    </button>
+    <h2 class="month-year">{{ currentMonth }} {{ currentYear }}</h2>
+    <button class="nav-btn" (click)="nextMonth()">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polyline points="9,18 15,12 9,6"></polyline>
+      </svg>
+    </button>
+  </div>
+  
+  <div class="calendar-grid">
+    <div class="weekdays">
+      <div class="weekday" *ngFor="let day of weekdays; let i = index" [style.--i]="i">{{ day }}</div>
+    </div>
+    
+    <div class="days-grid">
+      <div 
+        *ngFor="let day of calendarDays; trackBy: trackByDay; let i = index" 
+        class="day-cell"
+        [class.other-month]="!day.isCurrentMonth"
+        [class.today]="day.isToday"
+        [class.selected]="day.isSelected"
+        [class.has-event]="day.hasEvent"
+        [style.--i]="i"
+        (click)="selectDay(day)"
+      >
+        <span class="day-number">{{ day.date }}</span>
+        <div class="event-indicator" *ngIf="day.hasEvent"></div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="calendar-footer">
+    <button class="today-btn" (click)="goToToday()">Today</button>
+  </div>
+</div>  
+</div>
+
+
+
+
